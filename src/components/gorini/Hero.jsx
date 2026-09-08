@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { ArrowRight, ShieldCheck, Stethoscope, Award } from "lucide-react";
-import { Image } from "@/components/ui/image";
+import doctorHeroImg from "@/assets/doctor-hero.jpg";
 
 const HERO_IMG =
   "https://media.base44.com/images/public/6a9b364e8be02771ae4dcfb6/450e10b3e_generated_7458cf29.jpg";
@@ -20,8 +20,8 @@ export default function Hero() {
   };
 
   return (
-    <section id="topo" className="relative pt-28 pb-16 sm:pt-36 sm:pb-24 overflow-hidden bg-silk">
-      <div className="absolute top-0 right-0 w-[40%] h-[60%] bg-teal/5 rounded-bl-[200px] -z-0" />
+    <section id="topo" className="relative pt-28 pb-16 sm:pt-36 sm:pb-24 overflow-hidden bg-silk bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${doctorHeroImg})` }}>
+      {/* <div className="absolute top-0 right-0 w-[40%] h-[60%] bg-teal/5 rounded-bl-[200px] -z-0" /> */}
       <div className="mx-auto max-w-7xl px-5 sm:px-8 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center relative">
         {/* Left: copy + form */}
         <div className="reveal">
@@ -92,7 +92,7 @@ export default function Hero() {
 
         {/* Right: doctor card */}
         <div className="reveal relative">
-          <div className="relative rounded-2xl overflow-hidden shadow-[0_20px_60px_rgba(60,119,121,0.18)]">
+          {/* <div className="relative rounded-2xl overflow-hidden shadow-[0_20px_60px_rgba(60,119,121,0.18)]">
             <Image
               src={HERO_IMG}
               alt="Interior da Clínica Gorini"
@@ -100,17 +100,17 @@ export default function Hero() {
               fittingType="fill"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-teal-900/40 via-transparent to-transparent" />
-          </div>
+          </div> */}
 
           {/* Floating authority badges */}
-          <div className="absolute -left-3 sm:-left-6 top-10 glass rounded-2xl border border-gold/20 px-5 py-4 shadow-lg flex items-center gap-3">
+          <div className="absolute -left-3 sm:-left-6 glass rounded-2xl border border-gold/20 px-5 py-4 shadow-lg flex items-center gap-3" style={{ top: "calc(50% + 285px)" }}>
             <Award className="text-gold" size={26} />
             <div>
               <p className="font-heading text-2xl text-onyx leading-none">+10 mil</p>
               <p className="text-xs text-muted-foreground mt-1">procedimentos realizados</p>
             </div>
           </div>
-          <div className="absolute -right-3 sm:-right-6 bottom-10 glass rounded-2xl border border-gold/20 px-5 py-4 shadow-lg flex items-center gap-3">
+          <div className="absolute -left-3 sm:left-60 glass rounded-2xl border border-gold/20 px-5 py-4 shadow-lg flex items-center gap-3" style={{ top: "calc(50% + 285px)" }}>
             <Stethoscope className="text-teal" size={26} />
             <div>
               <p className="font-heading text-xl text-onyx leading-none">Membros SBCP</p>

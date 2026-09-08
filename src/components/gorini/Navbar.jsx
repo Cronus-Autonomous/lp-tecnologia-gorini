@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
+import logo from "@/assets/logo.webp";
 
 const LINKS = [
   { label: "Tecnologias", href: "#tecnologias" },
@@ -23,16 +24,12 @@ export default function Navbar() {
   return (
     <header
       className={`fixed top-0 inset-x-0 z-40 transition-all duration-500 ${
-        scrolled ? "glass border-b border-teal/10 py-3" : "py-5 bg-transparent"
+        scrolled ? "glass border-teal/10 py-3" : "py-5 bg-transparent"
       }`}
     >
       <nav className="mx-auto max-w-7xl px-5 sm:px-8 flex items-center justify-between">
         <a href="#topo" className="flex items-center gap-2" aria-label="Clínica Gorini — Início">
-          <span className="font-heading text-2xl tracking-tight text-teal">Gorini</span>
-          <span className="hidden sm:block w-8 h-px bg-gold" />
-          <span className="hidden sm:block text-[10px] uppercase tracking-[0.25em] text-muted-foreground">
-            Medicina Estética
-          </span>
+          <img src={logo} alt="Logo da Clínica Gorini" className="h-10 w-auto object-contain" />
         </a>
 
         <div className="hidden md:flex items-center gap-8">
@@ -40,7 +37,9 @@ export default function Navbar() {
             <a
               key={l.href}
               href={l.href}
-              className="text-sm text-onyx/70 hover:text-teal transition-colors"
+              className={`text-sm font-medium transition-colors hover:text-teal ${
+                scrolled ? "text-onyx/70" : "text-white"
+              }`}
             >
               {l.label}
             </a>
@@ -54,7 +53,7 @@ export default function Navbar() {
         </div>
 
         <button
-          className="md:hidden p-2 text-teal"
+          className={`md:hidden p-2 transition-colors ${scrolled ? "text-onyx" : "text-white"}`}
           onClick={() => setOpen((v) => !v)}
           aria-label={open ? "Fechar menu" : "Abrir menu"}
           aria-expanded={open}
