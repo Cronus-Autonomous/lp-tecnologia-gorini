@@ -25,13 +25,13 @@ export default function Hero() {
       <div className="mx-auto max-w-7xl px-5 sm:px-8 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center relative">
         {/* Left: copy + form */}
         <div className="reveal">
-          <span className="inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-teal bg-teal/8 border border-teal/15 rounded-full px-4 py-2">
+          <span className="inline-flex items-center glass-hero gap-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-teal-900 bg-teal/8 border border-teal/15 rounded-full px-4 py-2">
             <ShieldCheck size={14} /> Respaldo Médico & Tecnologias de Referência Internacional
           </span>
 
-          <h1 className="mt-7 font-heading text-[2.6rem] leading-[1.08] sm:text-6xl lg:text-[4.2rem] text-onyx tracking-tight text-balance">
+          <h1 className="mt-7 font-heading text-[2.6rem] leading-[1.08] sm:text-6xl lg:text-[4.2rem] text-silk tracking-tight text-balance">
             Resultados Reais e Naturais Sem Interromper Sua Rotina:{" "}
-            <span className="text-teal italic">O Futuro da Medicina Estética</span>
+            <span className="text-gold italic">O Futuro da Medicina Estética</span>
           </h1>
 
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-onyx/70">
@@ -43,7 +43,7 @@ export default function Hero() {
           <form
             id="agendar"
             onSubmit={handleSubmit}
-            className="mt-9 glass rounded-2xl border border-teal/10 p-5 sm:p-6 shadow-[0_10px_30px_rgba(0,0,0,0.04)]"
+            className="mt-9 glass-hero rounded-2xl border border-teal/10 p-5 sm:p-6 shadow-[0_10px_30px_rgba(0,0,0,0.04)]"
           >
             <div className="grid sm:grid-cols-2 gap-3">
               <input
@@ -103,14 +103,14 @@ export default function Hero() {
           </div> */}
 
           {/* Floating authority badges */}
-          <div className="absolute -left-3 sm:-left-6 glass rounded-2xl border border-gold/20 px-5 py-4 shadow-lg flex items-center gap-3" style={{ top: "calc(50% + 285px)" }}>
+          <div className="absolute -left-3 sm:-left-6 glass-hero rounded-2xl border border-gold/20 px-5 py-4 shadow-lg flex items-center gap-3" style={{ top: "calc(50% + 285px)" }}>
             <Award className="text-gold" size={26} />
             <div>
               <p className="font-heading text-2xl text-onyx leading-none">+10 mil</p>
               <p className="text-xs text-muted-foreground mt-1">procedimentos realizados</p>
             </div>
           </div>
-          <div className="absolute -left-3 sm:left-60 glass rounded-2xl border border-gold/20 px-5 py-4 shadow-lg flex items-center gap-3" style={{ top: "calc(50% + 285px)" }}>
+          <div className="absolute -left-3 sm:left-60 glass-hero rounded-2xl border border-gold/20 px-5 py-4 shadow-lg flex items-center gap-3" style={{ top: "calc(50% + 285px)" }}>
             <Stethoscope className="text-teal" size={26} />
             <div>
               <p className="font-heading text-xl text-onyx leading-none">Membros SBCP</p>

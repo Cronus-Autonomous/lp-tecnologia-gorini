@@ -24,7 +24,7 @@ export default function Navbar() {
   return (
     <header
       className={`fixed top-0 inset-x-0 z-40 transition-all duration-500 ${
-        scrolled ? "glass border-teal/10 py-3" : "py-5 bg-transparent"
+        scrolled ? "glass-hero border-teal/10 py-3" : "py-5 bg-transparent"
       }`}
     >
       <nav className="mx-auto max-w-7xl px-5 sm:px-8 flex items-center justify-between">
